@@ -11,6 +11,37 @@ Use the following annotations for persisting entities and adding constraints:
 ___
 ### Local Install with Maven:
 #### Include the following in your pom.xml
->   <groupId>org.example</groupId>  
->   <artifactId>Project1</artifactId>  
->   <version>1.0-SNAPSHOT</version>  
+>   `<groupId>org.example</groupId>`  
+>   `<artifactId>Project1</artifactId>`    
+>   `<version>1.0-SNAPSHOT</version>`  
+___
+### Includes support for:
+
+Table Creation - createSTable(Class<?> clazz)  
+
+Table Deletion - dropSTable(Class<?> clazz)  
+
+Object Persistence - createSObject(Object o)  
+ 
+Object Deletion - deleteSObject(Class<?> clazz, int keyInt)  
+
+Deletion of All Objects - deleteSAll(Class<?> clazz)  
+
+Object Retrieval - readSObject(Class<?> clazz, int keyInt)  
+
+Object Retrieval (All) - readAllSObjects(Class<T> clazz)
+
+Object Updates - updateSObject(Class<?> clazz, int keyInt, T ...params)
+___
+### Parameter Descriptions:
+
+clazz: The user-defined class corresponding to the entity to be persisted, retrieved, deleted, or updated  
+
+o: An object to be inserted into the database  
+
+keyInt: The integer representing the primary key of an entity in the database  
+
+params: Parameters to be updated in the database  
+
+
+
